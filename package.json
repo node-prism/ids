@@ -1,0 +1,25 @@
+{
+  "name": "@prsm/ids",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/src/index.js",
+  "type": "module",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "types": "lib/src/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsx tests/index.ts"
+  },
+  "author": "nvms",
+  "license": "ISC",
+  "dependencies": {
+    "long": "^5.2.1"
+  },
+  "devDependencies": {
+    "manten": "^0.6.0",
+    "tsx": "^3.12.1"
+  }
+}
