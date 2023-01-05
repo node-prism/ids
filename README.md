@@ -1,4 +1,4 @@
-# ID
+# ids
 
 Short, obfuscated, collision-proof reversible IDs.
 
