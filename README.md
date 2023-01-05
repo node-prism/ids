@@ -1,6 +1,6 @@
 # ids
 
-Short, obfuscated, collision-proof reversible IDs.
+Short, obfuscated, collision-proof, reversible IDs.
 
 ```typescript
 import ID from "@prsm/ids";
