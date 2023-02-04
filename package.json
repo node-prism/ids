@@ -1,16 +1,22 @@
 {
   "name": "@prsm/ids",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
-  "main": "lib/src/index.js",
+  "main": "./dist/index.js",
   "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "types": "lib/src/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean --minify",
     "test": "tsx tests/index.ts"
   },
   "author": "nvms",
@@ -20,6 +26,8 @@
   },
   "devDependencies": {
     "manten": "^0.6.0",
-    "tsx": "^3.12.1"
+    "tsup": "^6.5.0",
+    "tsx": "^3.12.1",
+    "typescript": "^4.9.5"
   }
 }

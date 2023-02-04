@@ -1,4 +1,4 @@
-export default class ID {
+declare class ID {
     private static MAX_INT32;
     private static MULTIPLIER;
     static alphabet: string;
@@ -11,3 +11,5 @@ export default class ID {
     static encode: (num: number) => string;
     static decode: (str: string) => number;
 }
+
+export { ID as default };
