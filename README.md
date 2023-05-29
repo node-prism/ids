@@ -1,5 +1,7 @@
 # ids
 
+[![NPM version](https://img.shields.io/npm/v/@prsm/ids?color=a1b858&label=)](https://www.npmjs.com/package/@prsm/ids)
+
 Short, obfuscated, collision-proof, reversible IDs.
 
 ```typescript
