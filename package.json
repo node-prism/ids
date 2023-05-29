@@ -17,7 +17,8 @@
   },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts --clean --minify",
-    "test": "tsx tests/index.ts"
+    "test": "tsx tests/index.ts",
+    "release": "bumpp package.json --commit 'Release %s' --push --tag && pnpm publish --access public"
   },
   "author": "nvms",
   "license": "ISC",
@@ -25,6 +26,7 @@
     "long": "^5.2.1"
   },
   "devDependencies": {
+    "bumpp": "^9.1.0",
     "manten": "^0.6.0",
     "tsup": "^6.5.0",
     "tsx": "^3.12.1",
