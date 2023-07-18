@@ -1,13 +1,13 @@
 import long from "long";
 
 export default class ID {
-  private static MAX_INT32 = 2147483647;
-  private static MULTIPLIER = 4294967296;
+  private static MAX_INT32 = 2_147_483_647;
+  private static MULTIPLIER = 4_294_967_296;
 
   public static alphabet: string = "23456789bcdfghjkmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ-_";
-  public static prime: number = 1125812041;
-  public static inverse: number = 348986105;
-  public static random: number = 998048641;
+  public static prime: number = 1_125_812_041;
+  public static inverse: number = 348_986_105;
+  public static random: number = 998_048_641;
 
   public static get base(): number {
     return ID.alphabet.length;
@@ -34,12 +34,12 @@ export default class ID {
     return result;
   }
 
-  public static encode = function(num: number): string {
+  public static encode = (num: number): string => {
     if (num > ID.MAX_INT32) {
       throw new Error(`Number (${num}) is too large to encode. MAX_INT32 is ${ID.MAX_INT32}`);
     }
 
-    let n: long = long.fromInt(num);
+    const n: long = long.fromInt(num);
 
     return ID.shorten(
       n
@@ -50,8 +50,8 @@ export default class ID {
     );
   };
 
-  public static decode = function(str: string): number {
-    let n: long = long.fromInt(ID.unshorten(str));
+  public static decode = (str: string): number => {
+    const n: long = long.fromInt(ID.unshorten(str));
 
     return n
       .xor(ID.random)
